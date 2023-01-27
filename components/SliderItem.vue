@@ -51,9 +51,6 @@ export default {
   data: () => ({
     maxRates: 5
   }),
-  mounted() {
-    console.log(this.product)
-  },
   props: {
     product: {
       type: Object,
@@ -66,27 +63,28 @@ export default {
 <style lang="scss" scoped>
 
 .card {
-  height: 580px;
-  display: flex!important;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 559px;
+  width: 16rem!important;
+  display: grid!important;
+  grid-template-rows: 240px 1fr;
   position: relative;
+  @media(max-width: 720px) {  width: 20rem!important;}
+  @media(max-width: 600px) {  width: 18rem!important;}
+  @media(max-width: 540px) {  width: 17rem!important;}
   &-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
   }
 }
 .card-img-top {
   max-width: 193px;
-  max-height: 193px;
-  margin: 30px auto 23px;
+  max-height: 220px;
+  margin: 23px auto;
   display: block;
 }
 .rating {
   display: flex;
-  margin-top: 12px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 7px;
   img {
     margin-right: 2px;
   }
@@ -103,6 +101,7 @@ export default {
   line-height: 24px;
   color: #000000;
   margin-top: 6px;
+  margin-bottom: 0;
 }
 .old-price {
   font-weight: 400;
@@ -121,7 +120,7 @@ export default {
 .card-bottom {
   display: flex;
   align-items: center;
-  margin-top: 23px;
+  margin-top: 13px;
   img:nth-child(2) {
     margin-left: auto;
     margin-right: 20px;

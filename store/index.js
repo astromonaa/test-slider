@@ -6,7 +6,7 @@ export const state = () => ({
     "infinite": true,
     "initialSlide": 2,
     "speed": 500,
-    "slidesToShow": 5,
+    "slidesToShow": 6,
     "slidesToScroll": 1,
     "swipeToSlide": true,
   }
@@ -19,6 +19,9 @@ export const getters = {
 export const mutations = {
   setProducts(state, products) {
     state.products = products
+  },
+  setCarouselSettings(state, arr) {
+    arr.forEach(item => state.settings[item.field] = item.value)
   }
 }
 

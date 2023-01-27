@@ -20,7 +20,7 @@
     line-height: 28px;
     color: #FFFFFF;
     position: absolute;
-    top: 30px;
-    left: 60px;
+    top: 12px;
+    left: 22px;
   }
 </style>

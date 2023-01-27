@@ -1,8 +1,5 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // publicRuntimeConfig: {
-  //   apiUrl: process.env.API_URL,
-  // },
   head: {
     title: 'Умная техника',
     htmlAttrs: {
